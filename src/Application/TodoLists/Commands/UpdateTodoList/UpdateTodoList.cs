@@ -20,6 +20,7 @@ public class UpdateTodoListCommandHandler : IRequestHandler<UpdateTodoListComman
 
     public async Task Handle(UpdateTodoListCommand request, CancellationToken cancellationToken)
     {
+        Console.WriteLine("hello");
         var entity = await _context.TodoLists
             .FindAsync(new object[] { request.Id }, cancellationToken);
 

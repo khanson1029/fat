@@ -6,6 +6,46 @@
     "version": "1.0.0"
   },
   "paths": {
+    "/api/DisplayStrings/hello": {
+      "get": {
+        "tags": [
+          "DisplayStrings"
+        ],
+        "operationId": "GetHello",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/DisplayStrings/rand": {
+      "get": {
+        "tags": [
+          "DisplayStrings"
+        ],
+        "operationId": "GetRand",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/TodoItems": {
       "get": {
         "tags": [

@@ -14,6 +14,7 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { TodoComponent } from './todo/todo.component';
 import { AuthorizeInterceptor } from 'src/api-authorization/authorize.interceptor';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DisplaystringsComponent } from './displaystrings/displaystrings.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HomeComponent,
     CounterComponent,
     FetchDataComponent,
-    TodoComponent
+    TodoComponent,
+    DisplaystringsComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -30,6 +32,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
+      { path:'displaystrings', component: DisplaystringsComponent},
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'todo', component: TodoComponent }
